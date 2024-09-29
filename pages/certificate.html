@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates - Hema</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background */
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #9400D3; /* Deep Violet Title */
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Certificate Grid Styling */
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .certificate-card {
+            background-color: #1a1a1a; /* Dark grey for the card background */
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(128, 0, 128, 0.5); /* Violet shadow */
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px); /* Lift card on hover */
+        }
+
+        .certificate-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .certificate-card h2 {
+            color: #9400D3;
+            font-size: 24px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .certificate-card p {
+            padding: 0 15px 15px 15px;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .certificate-card h2 {
+                font-size: 20px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .certificate-card h2 {
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>My Certifications</h1>
+    <p>Here are some of the professional certifications I have achieved over the years.</p>
+
+    <div class="certificate-grid">
+        <!-- Certificate 1 -->
+            <div class="certificate-card">
+                <img src="../certificates/EHE.jpg" alt="Ethical Hacking Certificate">
+                <h2>Ethical Hacking Essentials (EHE) - EC-Council</h2>
+                <p>A certification covering the basics of ethical hacking, network security, and vulnerability analysis, aimed at providing a foundation for penetration testing and cybersecurity roles.</p>
+            </div>
+
+        <!-- Certificate 2 -->
+            <div class="certificate-card">
+                <img src="../certificates/data_analytics.png" alt="Google Data Analytics Certificate">
+                <h2>Google Data Analytics Professional Certificate</h2>
+                <p>A comprehensive course covering data analytics tools such as SQL, R, and data visualization, equipping learners with the skills to interpret and analyze data effectively.</p>
+            </div>
+
+        <!-- Certificate 3 -->
+            <div class="certificate-card">
+                <img src="../certificates/cisco_networks.png" alt="Bug Bounty Certificate">
+                <h2>CCNA v7 Introduction to Networks</h2>
+                <p>Acquired foundational knowledge of networking principles, covering essential topics such as IP addressing, subnetting, routing, switching, and key network protocols. This course provided hands-on experience with configuring network devices and troubleshooting common networking issues.</p>
+            </div>
+         <!-- Certificate 4 -->
+            <div class="certificate-card">
+                <img src="../certificates/cisco_security.jpg" alt="Bug Bounty Certificate">
+                <h2>CCNA v7 Enterprise Networking, Security, and Automation</h2>
+                <p> Hands-on, lab-oriented training in advanced networking, security, and automation with Cisco solutions.</p>
+            </div>
+        <!-- Certificate 5 -->
+             <div class="certificate-card">
+                <img src="../certificates/AI.png" alt="CISCO CCNA Certificate">
+                <h2>Artificial Intelligence Training and Certification</h2>
+                <p>Certified in Artificial Intelligence, proficient in developing AI models and algorithms for intelligent decision-making and automation.</p>
+            </div>
+         <!-- Certificate 6 -->
+            <div class="certificate-card">
+                <img src="../certificates/Wifi.png" alt="CISCO CCNA Certificate">
+                <h2>Project Presentation</h2>
+                <p>WiFi Deauther Project Presentation: Demonstrated the creation of a WiFi deauthentication tool using NodeMCU ESP8266, showcasing how network vulnerabilities can be exploited and how to defend against such attacks.</p>
+            </div>
+        <!-- Certificate 7 -->
+            <div class="certificate-card">
+                <img src="../certificates/Web_Development.png" alt="Cybersecurity Certificate">
+                <h2> web development </h2>
+                <p>Certified in Web Development, skilled in building responsive websites.</p>
+            </div>
+        <!-- Certificate 8 -->
+            <div class="certificate-card">
+                <img src="../certificates/AWS.png">
+                <h2>AWS Cloud Practitioner</h2>
+                <p>Certification in cloud computing fundamentals and services on the Amazon Web Services platform, covering cloud architecture, management, and security best practices.</p>
+            </div>
+    </div>
+</div>
+</body>
+</html>

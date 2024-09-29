@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Hema</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text for readability */
+            margin: 0;
+            padding: 0;
+        }
+
+        .projects-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #1e1e1e; /* Dark grey for container */
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffcc00; /* Yellow color for title */
+            margin-bottom: 30px;
+            font-size: 36px;
+        }
+
+        .project {
+            margin-bottom: 50px;
+            padding: 20px;
+            border-bottom: 1px solid #444;
+        }
+
+        .project-title {
+            font-size: 28px;
+            color: #ffcc00; /* Yellow color for project titles */
+            margin-bottom: 15px;
+        }
+
+        .slider {
+            position: relative;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .active-slide {
+            display: block;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.6s ease;
+            user-select: none;
+            transform: translateY(-50%);
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .project-details {
+            margin-bottom: 20px;
+        }
+
+        .project-details h3 {
+            color: #ffcc00; /* Yellow color for section titles */
+            margin-bottom: 10px;
+        }
+
+        .project-details p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #ffcc00; /* Yellow color */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="projects-container">
+    <h1>My Projects</h1>
+
+    <!-- Project 1 -->
+    <div class="project">
+        <h2 class="project-title">Raspberry Pi Mini Server</h2>
+        <div class="slider" id="slider1">
+            <div class="slides active-slide">
+                <img src="https://www.cnx-software.com/wp-content/uploads/2021/07/DIY-Raspberry-Pi-4-mini-server.jpg" alt="Raspberry Pi Server Image 1">
+            </div>
+            <div class="slides">
+                <img src="https://www.cnx-software.com/wp-content/uploads/2021/07/mini-server-oled-display-ups.jpg" alt="Raspberry Pi Server Image 2">
+            </div>
+            <div class="slides">
+                <img src="https://www.the-diy-life.com/wp-content/uploads/2021/06/Fan-Side-of-Server-1024x573.jpg?ezimgfmt=rs:372x208/rscb1/ng:webp/ngcb1" alt="Raspberry Pi Server Image 3">
+            </div>
+            <div class="slides">
+                <img src="https://www.the-diy-life.com/wp-content/uploads/2021/06/Hold-UPS-In-Place-With-Brass-Standoffs-1024x572.jpg?ezimgfmt=rs:372x208/rscb1/ngcb1/notWebP" alt="Raspberry Pi Server Image 3">
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 'slider1')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slider1')">&#10095;</a>
+        </div>
+        <div class="project-details">
+            <h3>Description</h3>
+            <p>
+                I built a low-cost Raspberry Pi-based mini server to provide real-time monitoring of system performance, including detail about resource usage and health.
+                It is a flexible server that can be converted into a VPN, ad blocker, private cloud, or private NAS. This makes it a very good solution for home networking to small business needs.
+            </p>
+        </div>
+        <div class="project-details">
+            <h3>Working</h3>
+            <p>
+                Monitors key metrics such as CPU load, memory usage, and disk space in real-time. The server features a built-in Uninterruptible Power Supply (UPS) to ensure continuous operation, complemented 
+                by an OLED display that provides immediate feedback on system performance.</p>
+        </div>
+        <div class="project-details">
+            <h3>Components</h3>
+            <ul>
+                <li>Raspberry Pi 4 Model B</li>
+                <li>MicroSD Card (32GB or larger)</li>
+                <li>Power Supply (5V, 3A)</li>
+                <li>USB HDD or SSD for storage</li>
+                <li>OLED Display (optional)</li>
+                <li>Cooling Fan (optional)</li>
+                <li>Network cable (Ethernet)</li>
+            </ul>
+        </div>
+        <div class="project-details">
+            <h3>Usage</h3>
+            <p>The Raspberry Pi mini server can serve multiple functions:</p>
+            <ul>
+                <li><strong>VPN Server</strong>: Securely connect to your home network from anywhere in the world, ensuring privacy while browsing.</li>
+                <li><strong>Ad Blocker</strong>: Utilize software like Pi-hole to block unwanted ads and trackers across all devices on your network.</li>
+                <li><strong>Private Cloud Storage</strong>: Set up your own cloud solution using Nextcloud, allowing you to store and access files securely from any location.</li>
+                <li><strong>Private NAS (Network Attached Storage)</strong>: Store and manage your media files, documents, and backups with ease, providing a centralized location for your data.</li>
+            </ul>
+        </div>
+        <div class="project-details">
+            <h3>Benefits</h3>
+            <p>
+                The Raspberry Pi Mini Server is a cost-effective and energy-
+                efficient solution that can function as a VPN server, ad blocker, private cloud storage, and NAS. Its versatility allows for easy customization, making it ideal for both personal use and educational purposes. With extensive community support, users can access 
+                resources and tutorials to enhance their learning experience.
+            </p>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+   
+    <!-- Project 3 -->
+    <div class="project">
+        <h2 class="project-title">WiFi Deauther</h2>
+        <div class="slider" id="slider3">
+            <div class="slides active-slide">
+                <img src="https://m.media-amazon.com/images/I/617T2JKnxiL._AC_UF1000,1000_QL80_.jpg" alt="WiFi Deauther Image 1">
+            </div>
+            <div class="slides">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*IRws2f-SHyB5jZssVs6gBA.png" alt="WiFi Deauther Image 2">
+            </div>
+            <div class="slides">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*wcr04XA1gUk27wCoGOFCWg.png" alt="WiFi Deauther Image 2">
+            </div>
+            <div class="slides">
+                <img src="https://www.kalitut.com/wp-content/uploads/2020/06/Baud-Rate.png" alt="WiFi Deauther Image 2">
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 'slider3')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slider3')">&#10095;</a>
+        </div>
+        <div class="project-details">
+            <h3>Description</h3>
+            <p>
+                The WiFi Deauther is a powerful tool designed for network 
+                security testing and ethical hacking. Built using the NodeMCU
+                 ESP8266, it enables users to analyze and identify 
+                 vulnerabilities within WiFi networks by deauthenticating 
+                 devices, which helps assess the security of wireless connections. 
+                 This project serves as an educational platform for understanding network 
+                 protocols and enhancing cybersecurity awareness, making it an
+                 essential resource for security enthusiasts and professionals.
+
+            </p>
+        </div>
+        <div class="project-details">
+            <h3>Working</h3>
+            <p>
+                The WiFi Deauther sends deauthentication packets to a targeted WiFi network, disconnecting devices attempting to connect. This allows users to simulate attacks and assess network security vulnerabilities, helping to improve defenses against potential threats. It enables analysis 
+                of device responses and testing of various attack vectors on WiFi protocols.
+
+            </p>
+        </div>
+        <div class="project-details">
+            <h3>Components</h3>
+            <ul>
+                <li>NodeMCU ESP8266</li>
+                <li>Power Supply</li>
+                <li>Breadboard and Jumper Wires</li>
+                <li>Computer</li>
+                <li>WiFi Adapter</li>
+            </ul>
+        </div>
+        <div class="project-details">
+            <h3>Usage</h3>
+            <p>
+                The WiFi Deauther is used for penetration testing and security assessments of wireless networks. It helps identify vulnerabilities by disconnecting devices, allowing network administrators to evaluate their defenses. Additionally, it's useful for educational purposes,
+                 demonstrating the importance of WiFi security and the potential risks of weak protocols.
+            </p>
+        </div>
+        <div class="project-details">
+            <h3>Benefits</h3>
+            <ul>
+                <li><strong>Vulnerability Assessment</strong>: Identifies weaknesses in WiFi networks, helping to enhance security measures.</li>
+                <li><strong>Network Testing</strong>: Assists network administrators in testing the effectiveness of their security protocols.</li>
+                <li><strong>Educational Tool</strong>:  Serves as a practical demonstration for understanding wireless security risks and the importance of robust protections.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project">
+        <h2 class="project-title">Website Scraping Project</h2>
+        <div class="slider" id="slider4">
+            <div class="slides active-slide">
+                <img src="https://research.aimultiple.com/wp-content/uploads/2023/12/bright-data-amazon-scraper-612x252.png.webp" alt="Web Scraping Image 1">
+            </div>
+            <div class="slides">
+                <img src="https://miro.medium.com/v2/resize:fit:1200/1*Tuw7lC7sTSHU0LjM28ZJaw.jpeg" alt="Web Scraping Image 2">
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 'slider4')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'slider4')">&#10095;</a>
+        </div>
+        <div class="project-details">
+            <h3>Description</h3>
+            <p>Developed a web scraping tool to extract and analyze data from various websites using Python.</p>
+        </div>
+        <div class="project-details">
+            <h3>Working</h3>
+            <p>Uses BeautifulSoup and Scrapy libraries to gather structured data from e-commerce sites for market analysis.</p>
+        </div>
+        <div class="project-details">
+            <h3>Benefits</h3>
+            <ul></ul>
+                <li><strong>Vulnerability Assessment</strong>: Securely connect to your home network from anywhere in the world, ensuring privacy while browsing.</li>
+                <li><strong>Network Testing</strong>: Utilize software like Pi-hole to block unwanted ads and trackers across all devices on your network.</li>
+                <li><strong>Educational Tool</strong>: Set up your own cloud solution using Nextcloud, allowing you to store and access files securely from any location.</li>
+            </ul>
+        </div>
+        <div class="project" style="text-align: center;">
+            <h2 class="project-title">Currently Working Projects</h2>
+            <div class="project-details">
+                <p>I am actively engaged in the development of various innovative projects, such as:</p>
+                  
+                <!-- AI-Driven Driver Safety System Project -->
+                <h3><strong>DIY USB Rubber Duckey</strong></h3>
+                <div class="slider" id="slider-ai">
+                    <div class="slides active-slide">
+                        <img src="https://m.media-amazon.com/images/I/61RBVTA-7WL._AC_UF1000,1000_QL80_.jpg" alt="AI Driver Safety System Image 1">
+                    </div>
+                    <div class="slides">
+                        <img src="https://m.media-amazon.com/images/I/31pD8dz3P6L._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_SCLZZZZZZZ_FMpng_BG255%2C255%2C255.jpg" alt="AI Driver Safety System Image 2">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'slider-ai')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slider-ai')">&#10095;</a>
+                </div>
+                <div class="progress-container">
+                    <label for="ai-progress">Completion Progress: 10%</label>
+                    <progress id="ai-progress" value="10" max="100" style="width: 80%;"></progress>
+                </div>
+                <p>The DIY USB Rubber Ducky project involves building a custom USB device that mimics a keyboard to inject keystrokes rapidly. It allows for automated execution of scripts (payloads) on a target machine, making it a powerful tool for penetration testing and ethical hacking tasks.</p>
+        
+                <!-- IEEE Paper - Raspberry Pi Mini Server Project -->
+                <h3><strong>Raspberry Pi Zero W P4wnP1 A.L.O.A: USB & Wi-Fi Pentesting Platform</strong></h3>
+                <div class="slider" id="slider-pi">
+                    <div class="slides active-slide">
+                        <img src="data:image/jpeg;base64,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" alt="Raspberry Pi Mini Server Image 1">
+                    </div>
+                    <div class="slides">
+                        <img src="https://thepihut.com/cdn/shop/files/raspberry-pi-zero-2-w-raspberry-pi-sc0721-42860425609411_1000x.jpg?v=1724830148" alt="Raspberry Pi Mini Server Image 2">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 'slider-pi')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'slider-pi')">&#10095;</a>
+                </div>
+                <div class="progress-container">
+                    <label for="pi-progress">Completion Progress: 25%</label>
+                    <progress id="pi-progress" value="25" max="100" style="width: 80%;"></progress>
+                </div>
+                <p>The Raspberry Pi Zero W P4wnP1 A.L.O.A. project transforms a Raspberry Pi into a versatile pentesting tool, enabling USB device emulation, keystroke injection, and Wi-Fi covert channel attacks. It serves as a portable, low-cost platform for red teaming and cybersecurity testing.</p>
+            </div>
+                
+        </div>
+</div>
+
+<script>
+    function plusSlides(n, sliderId) {
+        showSlides(sliderId, n);
+    }
+
+    function showSlides(sliderId, n) {
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(`#${sliderId} .slides`);
+        
+        for (let i = 0; i < slides.length; i++) {
+            if (slides[i].style.display === 'block') {
+                slideIndex = i;
+                break;
+            }
+        }
+
+        slideIndex += n;
+        
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        }
+        if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        }
+        
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        slides[slideIndex].style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

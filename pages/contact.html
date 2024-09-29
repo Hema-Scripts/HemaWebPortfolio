@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Hema</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background */
+            color: #fff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #1a1a1a; /* Dark grey container */
+            box-shadow: 0 4px 10px rgba(128, 0, 128, 0.5); /* Violet shadow */
+            border-radius: 10px;
+            width: 90%; /* Make it responsive */
+        }
+
+        h1 {
+            color: #9400D3; /* Deep Violet Title */
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Contact Form Styling */
+        form {
+            margin-top: 30px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            max-width: 100%; /* Ensure it doesn't exceed container */
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            font-size: 16px;
+            outline: none;
+            box-sizing: border-box; /* Make padding included in width */
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        input[type="submit"] {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            background-color: #9400D3; /* Deep Violet button */
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d88bff; /* Lighter violet on hover */
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        .contact-item {
+            flex: 1;
+            margin: 20px;
+            min-width: 250px; /* Ensure proper width on smaller screens */
+        }
+
+        .contact-item i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: #9400D3; /* Deep Violet icons */
+        }
+
+        .contact-item p {
+            font-size: 16px;
+        }
+
+        .social-icons {
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            color: #9400D3;
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #d88bff; /* Lighter violet on hover */
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .contact-item {
+                margin: 10px 0;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .contact-item i {
+                font-size: 32px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>I'm Working on It – Contact Feature Coming Soon!</h1>
+    <h1>Contact Me</h1>
+    <p>If you have any questions or want to get in touch, feel free to reach out. I'd love to connect!</p>
+
+    <form action="your-backend-script.php" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message">
+    </form>
+
+    <!-- Contact Information -->
+    <div class="contact-info">
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <p>hchandran90@gmail.com</p> <!-- Replace with your actual email -->
+        </div>
+        <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <p><a href="https://www.linkedin.com/in/hema-chandran-900a69281/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color: #9400D3;">LinkedIn Profile</a></p> <!-- Replace with your LinkedIn -->
+        </div>
+
+        <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <p><a href="https://github.com/Hema-Scripts" target="_blank" style="color: #9400D3;">Github Profile</a></p> <!-- Replace with your LinkedIn -->
+        </div>
+        
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/hema-chandran-900a69281/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Hema-Scripts" target="_blank"><i class="fab fa-github"></i></a>
+        <!-- <a href="https://twitter.com/yourtwitter" target="_blank"><i class="fab fa-twitter"></i></a> -->
+    </div>
+</div>
+
+</body>
+</html>
